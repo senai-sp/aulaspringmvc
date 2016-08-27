@@ -2,7 +2,7 @@
 <c:import url="/WEB-INF/cabecalho.jsp" />
 <main id="conteudo">
 <div class="container">
-	<form action="contatoservlet" method="post">
+	<form action="salvarContato" method="post">
 		<h2>Cadastro de Contato</h2>
 		<!-- Substitua o esse conjunto por campos do seu formulário -->
 		<!-- 
@@ -33,8 +33,9 @@
 
 		<div class="grupo">
 			<label for="campo5">SEXO</label> <select id="campo5" name="sexo">
-				<option value="MASCULINO">Masculino</option>
-				<option value="FEMININO">Feminino</option>
+				<c:forEach items="${vetorSexos }" var="sexo">
+					<option value="${sexo }">${sexo.toString() }</option>
+				</c:forEach>
 			</select>
 		</div>
 

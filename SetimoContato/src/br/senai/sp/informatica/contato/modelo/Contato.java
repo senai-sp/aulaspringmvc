@@ -2,11 +2,14 @@ package br.senai.sp.informatica.contato.modelo;
 
 import java.util.Calendar;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Contato {
 	private Long codigo;
 	private String nome;
 	private String email;
 	private String telefone;
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar nascimento;
 	private Endereco endereco;
 	private Sexo sexo;

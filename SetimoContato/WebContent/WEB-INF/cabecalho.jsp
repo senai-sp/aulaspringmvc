@@ -15,8 +15,8 @@
 			<h1 id="logo"><a href="#" title="Meu Formulário">Meu Formulário</a></h1>
 			<nav>
 				<ul>
-					<li><a href="index.html" title="HOME">HOME</a></li>
-					<li><a href="formulario.html" title="NOVO CADASTRO">NOVO CADASTRO</a></li>
+					<li><a href="index.jsp-" title="HOME">HOME</a></li>
+					<li><a href="formContato" title="NOVO CADASTRO">NOVO CADASTRO</a></li>
 					<li><a href="lista.html" title="LISTA">LISTA</a></li>
 				</ul>
 			</nav>
