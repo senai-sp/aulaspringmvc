@@ -27,4 +27,10 @@ public class ContatoController {
 		dao.salvar(contato);
 		return "/contato/sucesso";
 	}
+	
+	@RequestMapping("/listarContatos")
+	public String listar(Model model){
+		model.addAttribute("listaContatos", dao.listar());
+		return "/contato/lista";
+	}
 }
