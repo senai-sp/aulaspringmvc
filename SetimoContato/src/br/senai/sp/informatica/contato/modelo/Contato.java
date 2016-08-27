@@ -2,15 +2,32 @@ package br.senai.sp.informatica.contato.modelo;
 
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
+@Entity
 public class Contato {
+	@Id
+	@GeneratedValue
+		(strategy=GenerationType.IDENTITY)	
 	private Long codigo;
 	private String nome;
 	private String email;
 	private String telefone;
 	@DateTimeFormat(pattern="dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
 	private Calendar nascimento;
+	@OneToOne(cascade=CascadeType.ALL, 
+			orphanRemoval=true)
 	private Endereco endereco;
 	private Sexo sexo;
 
