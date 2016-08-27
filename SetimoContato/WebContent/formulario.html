@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Formulario JP Morgan</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/meuestilo.css">
+	<script type="text/javascript" src="resources/js/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+<body>
+	<!-- CABECALHO -->
+	<header id="cabecalho">
+		<div class="container">
+			<h1 id="logo"><a href="#" title="Meu Formulário">Meu Formulário</a></h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="HOME">HOME</a></li>
+					<li><a href="formulario.html" title="NOVO CADASTRO">NOVO CADASTRO</a></li>
+					<li><a href="lista.html" title="LISTA">LISTA</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- END CABECALHO -->
+	
+	<!-- CONTEUDO -->
+	<main id="conteudo">
+		<div class="container">
+			<form action="contatoservlet" method="post">
+				<h2>Cadastro de Contato</h2>
+				<!-- Substitua o esse conjunto por campos do seu formulário -->
+				<!-- 
+					<div class="grupo">
+						<label for="campo1">CAMPO1</label>
+						<input type="text" id="campo1" name="campo1">
+					</div>
+				-->
+				<div class="grupo">
+					<label for="campo1">NOME</label>
+					<input type="text" id="campo1" name="nome">
+				</div>
+				
+				<div class="grupo">
+					<label for="campo2">EMAIL</label>
+					<input type="text" id="campo2" name="email">
+				</div>
+				
+				<div class="grupo">
+					<label for="campo3">TELEFONE</label>
+					<input type="text" id="campo3" name="telefone">
+				</div>
+				
+				<div class="grupo">
+					<label for="campo4">NASCIMENTO</label>
+					<input class="datepicker" type="text" id="campo4" name="nascimento">
+				</div>
+				
+				<div class="grupo">
+					<label for="campo5">SEXO</label>
+					<select id="campo5" name="sexo">
+						<option value="MASCULINO">Masculino</option>
+						<option value="FEMININO">Feminino</option>
+					</select>
+				</div>
+				
+				<div class="grupo">
+					<label for="campo6">LOGRADOURO</label>
+					<input type="text" id="campo6" name="endereco.logradouro">
+				</div>
+				
+				<div class="grupo">
+					<label for="campo7">NUMERO</label>
+					<input type="number" id="campo7" name="endereco.numero">
+				</div>
+
+				<button class="btn btn-cadastrar" type="submit">CADASTRAR</button>
+			</form>
+		</div>
+	</main>
+	<!-- END CONTEUDO -->
+	
+	<!-- RODAPE -->
+	<footer id="rodape">
+		<div class="container">
+			<p>Copyright JP Morgan :)</p>
+		</div>
+	</footer>
+	<!-- END RODAPE -->
+
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="js/pickaday.js"></script>
+	<script>
+		$(".datepicker").datepicker({
+			dateFormat: "dd/mm/yy"
+		});
+	</script>
+</body>
+</html>
